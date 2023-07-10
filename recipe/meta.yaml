@@ -30,9 +30,6 @@ requirements:
   run:
     - perl
 
-provider:
-  osx: travis
-
 test:
   imports:
     - DBI
