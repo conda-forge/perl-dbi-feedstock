@@ -1,21 +1,21 @@
 {% set name = "perl-dbi" %}
-{% set version = "1.643" %}
-{% set sha256 = "8a2b993db560a2c373c174ee976a51027dd780ec766ae17620c20393d2e836fa" %}
+{% set version = "1.647" %}
+{% set sha256 = "0df16af8e5b3225a68b7b592ab531004ddb35a9682b50300ce50174ad867d9aa" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-{{ version }}.tar.gz
+  url: https://cpan.metacpan.org/authors/id/H/HM/HMBRAND/DBI-{{ version }}.tgz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 0
+  skip: True  # [win]
   script:
     - perl Makefile.PL INSTALLDIRS=vendor NO_PERLLOCAL=1 NO_PACKLIST=1
-    - make
+    - make -j"${CPU_COUNT}"
     - make test   # [build_platform == target_platform]
     - make install VERBINST=1
 
@@ -36,12 +36,12 @@ test:
     - DBI
 
 about:
-  home: https://metacpan.org/dist/DBI
+  home: "https://metacpan.org/pod/DBI"
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
   license_family: OTHER
-  summary: 'Database independent interface for Perl'
-  license_file:
-    - LICENSE
+  summary: "Database independent interface for Perl."
+  license_file: LICENSE
+  doc_url: "https://metacpan.org/pod/DBI"
 
 extra:
   recipe-maintainers:

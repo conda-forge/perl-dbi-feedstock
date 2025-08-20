@@ -3,11 +3,13 @@ About perl-dbi-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/perl-dbi-feedstock/blob/main/LICENSE.txt)
 
-Home: https://metacpan.org/dist/DBI
+Home: https://metacpan.org/pod/DBI
 
 Package license: GPL-1.0-or-later OR Artistic-1.0-Perl
 
-Summary: Database independent interface for Perl
+Summary: Database independent interface for Perl.
+
+Documentation: https://metacpan.org/pod/DBI
 
 Current build status
 ====================
@@ -38,6 +40,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17247&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-dbi-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17247&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/perl-dbi-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
